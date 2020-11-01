@@ -1,0 +1,21 @@
+<form #transactionForm="ngForm">
+    <fieldset class="form-fieldset">
+        <legend>Account Transaction</legend>
+        <div class="form-group">
+            <label for="transactionAmount">Amount</label>
+            <input type="number" class="form-control" id="transactionAmount"
+                [(ngModel)]="amount" name="transactionAmount"
+                required #transactionAmount="ngModel">
+            <div [hidden]="transactionAmount.valid || transactionAmount.pristine" class="alert alert-danger">
+                Transaction Amount is required
+            </div>
+        </div>
+        <div class="action-buttons">
+            <button type="button" class="btn btn-success" [disabled]="!transactionForm.form.valid"
+            (click)="credit()">Credit</button>
+            <button type="button" class="btn btn-success" [disabled]="!transactionForm.form.valid"
+            (click)="debit()">Debit</button>
+        </div>
+    </fieldset
+    >
+</form>

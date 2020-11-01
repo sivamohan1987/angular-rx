@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<div>
+  <account-component></account-component>
+</div>
+<div>
+  <h2>Account List</h2>
+  <account-list (selectedAccount)="onSelectAccount($event)" [selectedAccountNumber]="selectedAccount">
+    <h3 slot="header">List of accounts</h3>
+    <!-- <p slot="footer">Content Projection</p> -->
+  </account-list>
+</div>
+<div>
+  <h2>Account Transaction</h2>
+  <account-transaction [accountNumber]="selectedAccount"></account-transaction>
+</div>

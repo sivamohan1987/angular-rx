@@ -1,0 +1,29 @@
+.account-table {
+    width: 700px;
+    border-spacing: 1px;
+}
+.account-table thead tr {
+    background-color: rgb(58, 58, 58);
+    vertical-align: middle;
+    height: 25px;
+    color: #FFF;
+}
+.account-table thead tr td {
+    border: 1px solid #e4e4e4;
+    padding: 0;
+}
+.account-table tbody tr {
+    background-color: #AAA;
+    vertical-align: middle;
+    height: 25px;
+}
+.account-table tbody tr:nth-child(odd) {
+    background-color: #efece2;
+}
+.account-table tbody tr:nth-child(even) {
+    background-color: #fafff3;
+}
+.account-table tbody tr td {
+    border: 1px solid #e4e4e4;
+    padding: 5px;
+}
